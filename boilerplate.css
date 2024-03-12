@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif, Arial, Helvetica;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  max-width: 100vw;
+}
