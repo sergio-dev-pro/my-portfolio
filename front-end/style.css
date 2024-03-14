@@ -3,15 +3,17 @@
 .profile-picture {
   width: auto;
   height: 15rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  /* border: 2px solid black; */
   /* border-radius: 1rem; */
 }
 
 .profile {
   display: flex;
-  align-items: center;
-  /* max-width: 470px; */
   margin: 0 auto;
-  background: #e0e0e0;
+  justify-content: center;
+  /* background: floralwhite; */
 }
 
 main {
