@@ -1,0 +1,78 @@
+@import url("../boilerplate.css");
+
+.profile-picture {
+  width: auto;
+  height: 15rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+
+.profile {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.imagens-referencia {
+  display: grid;
+  gap: 2rem;
+  background-color: #008060;
+  padding: 2rem;
+  width: 100vw;
+  /* justify-content: center; */
+  justify-items: center;
+}
+.imagens-referencia img {
+  width: 95%;
+  height: auto;
+}
+main {
+  /* padding: 2rem 0; */
+  text-align: center;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+h2 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 300;
+}
+h1 {
+  text-align: center;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact img {
+  width: 2rem;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+footer h3 {
+  margin: 0;
+}
+.contact p {
+  margin: 0;
+}
+@media only screen and (min-width: 550px) {
+  .contacts {
+    flex-direction: row;
+  }
+  .imagens-referencia {
+    grid-template-columns: 1fr 1fr;
+  }
+}
