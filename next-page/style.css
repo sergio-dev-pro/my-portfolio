@@ -43,6 +43,19 @@ h1 {
   padding: 0 10px;
 }
 
+.react-article {
+  background-color: #0b5270;
+  margin-bottom: 0.7rem;
+}
+article {
+  padding: 2rem;
+  color: white;
+  border-radius: 6px;
+}
+.next-article {
+  background-color: black;
+}
+
 .contacts {
   display: flex;
   justify-content: center;
