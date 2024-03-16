@@ -46,13 +46,15 @@ h1 {
 .react-article {
   background-color: #0b5270;
   margin-bottom: 0.7rem;
+  color: white;
+  padding: 2rem;
 }
 article {
-  padding: 2rem;
-  color: white;
   border-radius: 6px;
 }
 .next-article {
+  padding: 2rem;
+  color: white;
   background-color: black;
 }
 
