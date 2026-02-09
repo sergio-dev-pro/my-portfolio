@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfólio de front-end</title>
+    <style>
+      .container {
+        text-align: center;
+        max-width: 600px;
+        padding: 20px;
+      }
+
+      .profile {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      .typing {
+        font-size: 24px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid #fff;
+        display: inline-block;
+        padding-right: 6px;
+        animation: blink 0.8s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        50%,
+        100% {
+          border-color: transparent;
+        }
+        25%,
+        75% {
+          border-color: #fff;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .typing {
+          font-size: 20px;
+        }
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* BASE MOBILE FIRST */
+      body {
+        font-family: Inter, Arial, sans-serif;
+        background: #0f2027;
+        color: #fff;
+        line-height: 1.5;
+      }
+
+      main {
+        width: 100%;
+      }
+
+      /* HERO */
+      .container {
+        /* min-height: 100vh; */
+        padding: 24px 16px 0px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .profile {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .typing {
+        font-size: 18px;
+        font-weight: 500;
+        white-space: break-spaces;
+        border-right: 2px solid #fff;
+        padding-right: 6px;
+      }
+
+      /* SEÇÕES */
+      article {
+        padding: 40px 16px;
+      }
+
+      article h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      /* GRID DE IMAGENS (MOBILE) */
+      .images {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .images img {
+        border-radius: 12px;
+      }
+
+      /* TEXTO FULL */
+      .full-column {
+        font-size: 16px;
+        text-align: center;
+        margin: 16px 0;
+      }
+
+      /* FOOTER */
+      footer {
+        padding: 40px 16px;
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      footer h3 {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .contact p {
+        font-size: 14px;
+      }
+
+      /* =========================
+   TABLET (≥ 768px)
+========================= */
+      @media (min-width: 768px) {
+        .profile {
+          width: 140px;
+          height: 140px;
+        }
+
+        .typing {
+          font-size: 22px;
+        }
+
+        article {
+          padding: 60px 40px;
+        }
+
+        article h2 {
+          font-size: 24px;
+        }
+
+        .images {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .full-column {
+          grid-column: span 2;
+        }
+      }
+
+      /* =========================
+   DESKTOP (≥ 1024px)
+========================= */
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        article {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .typing {
+          font-size: 26px;
+        }
+
+        .images {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+
+        .full-column {
+          grid-column: span 3;
+        }
+
+        .large-screen-img {
+          max-height: 500px;
+          object-fit: contain;
+        }
+
+        .contacts {
+          flex-direction: row;
+          justify-content: center;
+          gap: 40px;
+        }
+      }
+      .images img,
+      .images video {
+        width: 100%;
+        border-radius: 12px;
+        background: #000;
+      }
+
+      /* GARANTE PROPORÇÃO BOA */
+      .images video {
+        aspect-ratio: 9 / 16; /* ideal pra app mobile */
+        object-fit: cover;
+      }
+
+      /* =========================
+   ARTICLES – VISUAL MODERNO
+========================= */
+
+      article {
+        margin: 40px 16px;
+        padding: 32px 20px;
+        border-radius: 20px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.02)
+        );
+        backdrop-filter: blur(10px);
+        box-shadow:
+          0 10px 30px rgba(0, 0, 0, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      }
+
+      /* TÍTULOS DOS CASES */
+      article h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 28px;
+        text-align: center;
+        letter-spacing: 0.4px;
+      }
+
+      /* GRID DE MÍDIA */
+      article .images {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      /* IMAGENS E VÍDEOS */
+      article .images img,
+      article .images video {
+        border-radius: 16px;
+        background: #000;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+
+      /* HOVER SUAVE (DESKTOP) */
+      @media (hover: hover) {
+        article .images img:hover,
+        article .images video:hover {
+          transform: translateY(-4px) scale(1.01);
+          box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+        }
+      }
+
+      /* TEXTO DESCRITIVO */
+      article h3 {
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+
+      /* =========================
+   TABLET
+========================= */
+      @media (min-width: 768px) {
+        article {
+          margin: 60px auto;
+          padding: 48px 40px;
+          max-width: 900px;
+        }
+
+        article h2 {
+          font-size: 26px;
+        }
+
+        article .images {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+      }
+
+      /* =========================
+   DESKTOP
+========================= */
+      @media (min-width: 1024px) {
+        article {
+          max-width: 1100px;
+        }
+
+        article h2 {
+          font-size: 28px;
+        }
+
+        article .images {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .project-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      /* BADGE DE TELAS */
+      .screens-count {
+        font-size: 13px;
+        font-weight: 500;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(6px);
+        letter-spacing: 0.4px;
+        opacity: 0.9;
+      }
+
+      /* TABLET + */
+      @media (min-width: 768px) {
+        .project-header {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .screens-count {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <img class="profile" src="./boa-foto.jpg" alt="Foto de Sergio" />
+
+        <div class="typing" id="typing"></div>
+      </div>
+      <article class="brahma-app">
+        <h2>Solicitar guincho</h2>
+        <!-- <span class="screens-count">3 / 46 telas</span> -->
+        <div class="images">
+          <!-- <video
+            class="media"
+            src="./video1.mp4"
+            controls
+            muted
+            playsinline
+            poster="./video1.mp4"
+          ></video> -->
+          <!-- <img src="./tela7.jpg" />
+          <img src="./tela5.jpg" /> -->
+          <!-- <img src="./tela4.jpg" /> -->
+          <!-- <img src="./tela6.jpg" /> -->
+          <!-- <img src="./tela8.jpg" /> -->
+          <img src="./tela1.png" />
+          <img src="./tela2.png" />
+          <img src="./tela3.png" />
+          <img src="./tela7.png" />
+          <img src="./tela8.png" />
+          <img src="./tela9.png" />
+          <img src="./tela11.png" />
+          <img src="./tela12.png" />
+        </div>
+        
+        <!-- <div class="images">
+          <video
+            class="media"
+            src="./video1.mp4"
+            controls
+            muted
+            playsinline
+            poster="./video1.mp4"
+          ></video>
+          <img src="./tela7.jpg" />
+          <img src="./tela5.jpg" />
+          <img src="./tela4.jpg" />
+          <img src="./tela6.jpg" />
+          <img src="./tela8.jpg" />
+          <img src="./tela1.png" />
+          <img src="./tela2.png" />
+          <img src="./tela3.png" />
+          <img src="./tela4.png" />
+          <img src="./tela5.png" />
+          <img src="./tela6.png" />
+          <img src="./tela7.png" />
+          <img src="./tela8.png" />
+          <img src="./tela9.png" />
+          <img src="./tela10.png" />
+          <img src="./tela11.png" />
+          <img src="./tela12.png" />
+          <img src="./tela13.png" />
+          <img src="./tela14.png" />
+          <img src="./tela15.png" />
+          <img src="./tela16.png" />
+          <img src="./tela17.png" />
+          <img src="./tela18.png" />
+          <img src="./tela19.png" />
+          <img src="./tela20.png" />
+          <img src="./tela21.png" />
+          <img src="./tela22.png" />
+          <img src="./tela23.png" />
+          <img src="./tela24.png" />
+          <img src="./tela25.png" />
+          <img src="./tela26.png" />
+          <img src="./tela27.png" />
+        </div> -->
+      </article>
+      <article class="brahma-app">
+           <h2>Prestador</h2>
+          <div class="images">
+            <!-- <video
+              class="media"
+              src="./video1.mp4"
+              controls
+              muted
+              playsinline
+              poster="./video1.mp4"
+            ></video> -->
+            <!-- <img src="./tela7.jpg" />
+            <img src="./tela5.jpg" /> -->
+            <!-- <img src="./tela4.jpg" /> -->
+            <!-- <img src="./tela6.jpg" /> -->
+            <!-- <img src="./tela8.jpg" /> -->
+            <img src="./tela4.png" />
+            <!-- <img src="./tela5.png" /> -->
+            <!-- <img src="./tela6.png" /> -->
+            <img src="./tela13.png" />
+            <img src="./tela14.png" />
+            <!-- <img src="./tela15.png" /> -->
+            <img src="./tela16.png" />
+            <img src="./tela17.png" />
+            <img src="./tela18.png" />
+            <!-- <img src="./tela19.png" /> -->
+            <img src="./tela20.png" />
+            <img src="./tela21.png" />
+            <img src="./tela22.png" />
+            <img src="./tela23.png" />
+          </div>
+        </article>
+        <article class="brahma-app">
+           <h2>Administrador</h2>
+          <div class="images">
+             <img src="./tela24.png" />
+            <img src="./tela25.png" />
+            <img src="./tela26.png" />
+            <img src="./tela27.png" />
+          </div>
+        </article>
+        
+      <!-- <article class="brutos-app">
+        <h2>Entregas de kits</h2>
+        <span class="screens-count">3 / 39 telas</span>
+        <div class="images">
+          <img src="./tela1.jpg" />
+          <img src="./tela11.jpg" />
+          <img src="./tela2.jpg" />
+          <img src="./tela3.jpg" />
+          <img src="./tela10.jpg" />
+          <img src="../brutos-products-mobile-screen.png" />
+          <img src="../brutos-register-product-mobile-screen.png" />
+          <img src="../brutos-navnbar-mobile-screen.png" />
+          <img src="../brutos-affiliates-mobile-screen.png" />
+          <h3 class="full-column">
+            Páginas responsivas. Compatível em diversos dispositivos. Incluindo
+            SmartPhones, Tablets, Notbooks e Monitores.
+          </h3>
+          <img
+            class="large-screen-img full-column"
+            src="../brutos-stock-screen.png"
+          />
+          <img
+            class="large-screen-img full-column"
+            src="../brutos-users-screen.png"
+          />
+        </div>
+      </article> -->
+      <!-- <article class="brutos-app">
+        <h2>Controle de estoque para restaurantes</h2>
+        <span class="screens-count">3 / 28 telas</span>
+        <div class="images">
+          <img src="../brutos-navnbar-mobile-screen.png" />
+          <img src="../brutos-affiliates-mobile-screen.png" />
+          <img src="../brutos-products-mobile-screen.png" />
+          <img src="../brutos-register-product-mobile-screen.png" />
+          <h3 class="full-column">
+            Páginas responsivas. Compatível em diversos dispositivos. Incluindo
+            SmartPhones, Tablets, Notbooks e Monitores.
+          </h3>
+          <img
+            class="large-screen-img full-column"
+            src="../brutos-stock-screen.png"
+          />
+          <img
+            class="large-screen-img full-column"
+            src="../brutos-users-screen.png"
+          />
+        </div>
+      </article> -->
+    </main>
+    <footer id="contatos">
+      <h3>Contatos</h3>
+      <div class="contacts">
+        <div class="contact">
+          <p>Número:71993553137-</p>
+        </div>
+        <div class="contact">
+          <p>E-mail:sergiolucasoliveira02@gmail.com</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const texts = [
+        "Veja algumas das telas dos projetos concluídos utilizando React Native.",
+        // "",
+        // "Entre em contato para saber mais",
+      ];
+
+      const typingElement = document.getElementById("typing");
+
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeEffect() {
+        const currentText = texts[textIndex];
+
+        if (!isDeleting) {
+          typingElement.textContent = currentText.slice(0, charIndex + 1);
+          charIndex++;
+
+          if (charIndex === currentText.length) {
+            setTimeout(() => (isDeleting = true), 1500);
+          }
+        } else {
+          typingElement.textContent = currentText.slice(0, charIndex - 1);
+          charIndex--;
+
+          if (charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+          }
+        }
+
+        const speed = isDeleting ? 50 : 80;
+        setTimeout(typeEffect, speed);
+      }
+
+      typeEffect();
+    </script>
+  </body>
+</html>
