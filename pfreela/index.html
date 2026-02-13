@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor Freelancer | Criação de Sites e Apps</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #4b89f8;
+        --black: #000;
+        --white: #fff;
+        --yellow: #ffd600;
+        --pink: #ff4db8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Work Sans", sans-serif;
+      }
+
+      body {
+        background: var(--white);
+        color: var(--black);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 40px 20px 0px 20px;
+      }
+
+      /* BOTÕES */
+      .btn {
+        display: inline-block;
+        padding: 16px 28px;
+        font-weight: 800;
+        text-decoration: none;
+        color: var(--black);
+        background: var(--yellow);
+        border: 4px solid var(--black);
+        box-shadow: 6px 6px 0 var(--black);
+        transition: 0.2s;
+      }
+
+      .btn:hover {
+        transform: translate(-4px, -4px);
+        box-shadow: 10px 10px 0 var(--black);
+      }
+
+      /* HERO */
+      .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 80px;
+      }
+
+      .hero-text {
+        flex: 1;
+      }
+
+      .hero-text h1 {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+
+      .hero-text span {
+        background: var(--primary);
+        padding: 4px 8px;
+      }
+
+      .hero-text p {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      .hero-img {
+        flex: 1;
+        text-align: center;
+      }
+
+      .hero-img img {
+        width: 280px;
+        border: 6px solid var(--black);
+        box-shadow: 10px 10px 0 var(--primary);
+      }
+
+      /* SEÇÕES */
+      .section {
+        margin-bottom: 80px;
+      }
+
+      .section h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        background: var(--pink);
+        display: inline-block;
+        padding: 6px 12px;
+        border: 4px solid var(--black);
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .card {
+        flex: 1;
+        min-width: 250px;
+        padding: 30px;
+        border: 4px solid var(--black);
+        box-shadow: 8px 8px 0 var(--black);
+        background: var(--white);
+      }
+
+      .card h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+
+      .cta-final {
+        text-align: center;
+        padding: 60px 20px;
+        background: var(--primary);
+        border: 6px solid var(--black);
+        box-shadow: 10px 10px 0 var(--black);
+      }
+
+      .cta-final h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        .hero-text h1 {
+          font-size: 36px;
+        }
+      }
+
+      /* GALERIA DE TELAS */
+
+      .screenshots {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .screen {
+        text-align: center;
+      }
+
+      .screen img {
+        width: 220px;
+        border: 5px solid var(--black);
+        box-shadow: 8px 8px 0 var(--primary);
+        transition: 0.2s;
+      }
+
+      .screen img:hover {
+        transform: translate(-5px, -5px);
+        box-shadow: 12px 12px 0 var(--black);
+      }
+
+      .screen p {
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      /* // */
+      /* PROJETO PREMIUM */
+
+      .projeto-premium {
+        position: relative;
+      }
+
+      .case-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .case-info {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .case-info h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .case-desc {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+
+      .case-box {
+        padding: 20px;
+        border: 4px solid var(--black);
+        box-shadow: 8px 8px 0 var(--black);
+        margin-bottom: 25px;
+        background: var(--white);
+      }
+
+      .case-gallery {
+        flex: 1;
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .phone {
+        background: var(--white);
+        padding: 15px;
+        border: 6px solid var(--black);
+        box-shadow: 10px 10px 0 var(--primary);
+        transition: 0.3s;
+      }
+
+      .phone img {
+        width: 220px;
+        display: block;
+      }
+
+      .phone:hover {
+        transform: translate(-6px, -6px);
+        box-shadow: 14px 14px 0 var(--black);
+      }
+
+      /* ANIMAÇÃO SUAVE */
+
+      .projeto-premium {
+        animation: fadeUp 0.8s ease forwards;
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* HERO AJUSTADA */
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 80px;
+        flex-wrap: wrap;
+      }
+
+      .hero-img-desktop img {
+        width: 280px;
+        border: 6px solid var(--black);
+        box-shadow: 10px 10px 0 var(--primary);
+      }
+
+      .hero-img-mobile {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .hero-img-mobile img {
+        width: 120px;
+        border-radius: 50%;
+        border: 4px solid var(--black);
+        box-shadow: 6px 6px 0 var(--primary);
+      }
+
+      /* RESPONSIVO */
+
+      @media (max-width: 768px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-img-desktop {
+          display: none;
+        }
+
+        .hero-img-mobile {
+          display: block;
+        }
+
+        .hero-text h1 {
+          font-size: 30px;
+        }
+
+        .hero-text p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <!-- FOTO MOBILE (APARECE SÓ NO MOBILE) -->
+        <div class="hero-img-mobile">
+          <img src="../boa-foto.jpg" alt="Foto do desenvolvedor" />
+        </div>
+        <div class="hero-text">
+          <h1>
+            Eu transformo <span>ideias</span> em sites e aplicativos que vendem.
+          </h1>
+          <p>
+            Desenvolvedor Freelancer especializado em criação de sistemas,
+            landing pages e aplicativos modernos.
+          </p>
+          <a href="#contato" class="btn">QUERO UM ORÇAMENTO</a>
+        </div>
+
+        <div class="hero-img-desktop">
+          <!-- Substitua pela sua foto -->
+          <img src="../boa-foto.jpg" alt="Foto do desenvolvedor" />
+        </div>
+      </section>
+
+      <!-- SERVIÇOS -->
+      <section class="section">
+        <h2>O que eu faço</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Landing Pages</h3>
+            <p>
+              Páginas focadas em conversão para vender seu produto ou serviço.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Aplicativos Web</h3>
+            <p>
+              Sistemas modernos e rápidos usando React e tecnologias atuais.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Apps Mobile</h3>
+            <p>Aplicativos personalizados para Android e iOS.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIFERENCIAL -->
+      <section class="section">
+        <h2>Por que me contratar?</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Foco em Resultado</h3>
+            <p>Não é só design bonito. É estratégia para gerar clientes.</p>
+          </div>
+          <div class="card">
+            <h3>Entrega Rápida</h3>
+            <p>Projetos ágeis e comunicação direta com você.</p>
+          </div>
+          <div class="card">
+            <h3>Suporte</h3>
+            <p>Acompanhamento mesmo após o projeto finalizado.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETO GUINCHO -->
+      <section class="section">
+        <h2>Case de Sucesso</h2>
+
+        <div class="card" style="margin-bottom: 40px">
+          <h3>🚛 App de Solicitação de Guincho</h3>
+          <p style="margin-bottom: 15px">
+            Desenvolvimento completo de aplicativo para solicitação de guincho,
+            conectando motoristas a prestadores de serviço em tempo real.
+          </p>
+
+          <p>
+            <strong>Problema:</strong> Motoristas tinham dificuldade para
+            encontrar guincho rápido e confiável.
+          </p>
+          <p>
+            <strong>Solução:</strong> Aplicativo com localização automática,
+            cálculo de distância e solicitação instantânea.
+          </p>
+          <p>
+            <strong>Resultado:</strong> Processo simplificado e atendimento mais
+            rápido.
+          </p>
+        </div>
+
+        <div class="screenshots">
+          <div class="screen">
+            <img src="../tela1.png" alt="Tela inicial do app de guincho" />
+            <p>Tela Inicial</p>
+          </div>
+
+          <div class="screen">
+            <img src="../tela8.png" alt="Tela de solicitação de guincho" />
+            <p>Solicitação com localização</p>
+          </div>
+
+          <div class="screen">
+            <img src="../tela11.png" alt="Tela de acompanhamento" />
+            <p>Acompanhamento em tempo real</p>
+          </div>
+        </div>
+        <!-- <a href="#contato" style="margin-top: 2rem" class="btn">QUERO UM APP</a> -->
+      </section>
+    </div>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" id="contato">
+      <h2>Vamos tirar seu projeto do papel?</h2>
+      <a href="https://wa.me/5571993553137" class="btn">FALAR NO WHATSAPP</a>
+    </section>
+
+    <footer>© 2026 - Seu Nome | Desenvolvedor Freelancer</footer>
+  </body>
+</html>

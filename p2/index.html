@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sergio Saraiva | Front-End React Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at 20% 30%, #1e1e2f, #0d0d15);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Fundo animado */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00f5ff, #8a2be2, #00f5ff);
+  animation: gradientMove 12s linear infinite;
+  opacity: 0.08;
+}
+
+@keyframes gradientMove {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Container 3D */
+.container {
+  perspective: 1200px;
+}
+
+.card {
+  width: 400px;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+}
+
+.card h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  background: linear-gradient(90deg, #00f5ff, #8a2be2);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-weight: 300;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  padding: 6px 12px;
+  border-radius: 15px;
+  background: rgba(0,255,255,0.1);
+  border: 1px solid rgba(0,255,255,0.3);
+  font-size: 12px;
+}
+
+.btn {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00f5ff, #8a2be2);
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00f5ff;
+}
+
+/* Responsivo */
+@media(max-width: 500px){
+  .card {
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="card" id="card">
+    <h1>Sergio Saraiva</h1>
+    <h2>Front-End Developer • React Specialist</h2>
+    <p>
+      Desenvolvedor Front-End especializado em React, focado na criação de interfaces modernas, performáticas e escaláveis. 
+      Experiência com aplicações complexas, design systems e arquitetura front-end.
+    </p>
+
+    <div class="skills">
+      <div class="skill">React</div>
+      <div class="skill">Next.js</div>
+      <div class="skill">TypeScript</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">SCSS</div>
+      <div class="skill">Redux</div>
+    </div>
+
+    <a href="#" class="btn">Ver Projetos</a>
+  </div>
+</div>
+
+<script>
+const card = document.getElementById("card");
+
+document.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 25;
+  const y = (window.innerHeight / 2 - e.clientY) / 25;
+  card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+document.addEventListener("mouseleave", () => {
+  card.style.transform = "rotateY(0deg) rotateX(0deg)";
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sergio Saraiva | Front-end React</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #F7F7F7;
+      padding: 40px;
+    }
+
+    h1, h2, h3 {
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .card {
+      background: white;
+      border: 4px solid black;
+      padding: 30px;
+      box-shadow: 8px 8px 0px black;
+    }
+
+    .hero {
+      background: #FFD600;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 3px solid black;
+      background: #00E0FF;
+      font-weight: bold;
+      margin: 5px 5px 0 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .project {
+      margin-top: 25px;
+      padding: 20px;
+      border: 3px solid black;
+      box-shadow: 6px 6px 0px black;
+      background: #FF90E8;
+    }
+
+    .project:nth-child(2) {
+      background: #B3FF00;
+    }
+
+    .project:nth-child(3) {
+      background: #FF6B6B;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: 3px solid black;
+      background: white;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      box-shadow: 4px 4px 0px black;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px black;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    @media(max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="card hero">
+      <h1>Lucas Oliveira</h1>
+      <h3>Front-end Developer | React & React Native</h3>
+      <p style="margin-top: 15px;">
+        Desenvolvedor focado na construção e evolução de produtos digitais escaláveis.
+        Experiência com React, React Native e TypeScript, atuando desde arquitetura até deploy em produção.
+      </p>
+    </div>
+
+    <!-- STACK -->
+    <div class="card">
+      <h2>Stack Principal</h2>
+      <div class="skills">
+        <span class="badge">React</span>
+        <span class="badge">React Native</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Tailwind</span>
+        <span class="badge">SCSS</span>
+        <span class="badge">REST APIs</span>
+        <span class="badge">Git</span>
+        <span class="badge">Jest</span>
+        <span class="badge">Node.js</span>
+      </div>
+    </div>
+
+    <!-- EXPERIÊNCIA ESTRATÉGICA -->
+    <div class="card">
+      <h2>Experiência Técnica</h2>
+
+      <ul>
+        <li>Manutenção e evolução de aplicações React e React Native</li>
+        <li>Construção de app mobile do zero até deploy em produção</li>
+        <li>Consumo e integração com APIs REST</li>
+        <li>Boas práticas de componentização e arquitetura escalável</li>
+        <li>Testes unitários com Jest</li>
+        <li>Refatoração e reestruturação de frontends</li>
+        <li>Performance (lazy loading, code splitting)</li>
+        <li>Publicação de aplicativos na Play Store</li>
+        <li>Trabalho com Git e metodologias ágeis (Scrum/Kanban)</li>
+        <li>Conhecimento em mercado financeiro e produtos digitais</li>
+      </ul>
+    </div>
+
+    <!-- PROJETOS -->
+    <div class="card">
+      <h2>Projetos em Destaque</h2>
+
+      <!-- Projeto 1 -->
+      <div class="project">
+        <h3>📱 App React Native – Entrega de Kits para Evento</h3>
+        <p>
+          Aplicativo desenvolvido do zero para controle e entrega de kits em evento.
+          Inclui autenticação, integração com API e deploy em produção.
+        </p>
+        <a href="https://github.com/sergio-dev-pro/ControlKitApp" class="btn" target="_blank">Ver Código no GitHub</a>
+      </div>
+
+      <!-- Projeto 2 -->
+      <div class="project">
+        <h3>🌐 Portal Web React + MUI</h3>
+        <p>
+          Aplicação web desenvolvida com React e JavaScript utilizando MUI.
+          Foco em componentização, organização de layout e boas práticas.
+        </p>
+        <a href="https://github.com/sergio-dev-pro/controllStock" class="btn" target="_blank">Ver Código no GitHub</a>
+      </div>
+
+      <!-- Projeto 3 -->
+      <div class="project">
+        <h3>🛒 FakeStore – React + TypeScript + SCSS</h3>
+        <p>
+          Projeto pessoal com arquitetura organizada, design patterns,
+          testes unitários e boas práticas de desenvolvimento.
+        </p>
+        <a href="https://github.com/sergio-dev-pro/fakeStore" class="btn" target="_blank">Ver Código no GitHub</a>
+      </div>
+
+    </div>
+
+    <!-- DIFERENCIAL -->
+    <div class="card">
+      <h2>Diferenciais</h2>
+      <ul>
+        <li>Experiência real com deploy mobile em produção</li>
+        <li>Capacidade de atuar junto a design, backend e produto</li>
+        <li>Foco em performance, qualidade e escalabilidade</li>
+        <li>Experiência em refatoração e melhoria contínua</li>
+        <li>Autonomia para propor soluções técnicas</li>
+      </ul>
+    </div>
+
+    <footer>
+      © 2026 Sergio Saraiva | React Front-end Developer
+    </footer>
+
+  </div>
+
+</body>
+</html>

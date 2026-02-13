@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sergio Saraiva | Front-End Developer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Work Sans', sans-serif;
+      background: #F4F4F4;
+      color: #000;
+      padding: 40px;
+    }
+
+    h1, h2, h3 {
+      font-weight: 900;
+    }
+
+    /* === BOTÃO NEOBRUTALISTA === */
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      background: #FFD600;
+      border: 4px solid #000;
+      font-weight: 800;
+      text-decoration: none;
+      color: #000;
+      box-shadow: 6px 6px 0px #000;
+      transition: 0.1s ease-in-out;
+    }
+
+    .btn:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0px #000;
+    }
+
+    /* === HERO === */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 250px;
+      background: #4B89F8;
+      border: 5px solid #000;
+      box-shadow: 10px 10px 0px #000;
+      padding: 10px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      display: block;
+    }
+
+    /* === SEÇÃO === */
+    section {
+      margin-bottom: 80px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      background: #FF4D4D;
+      display: inline-block;
+      padding: 10px 20px;
+      border: 4px solid #000;
+      box-shadow: 6px 6px 0px #000;
+      margin-bottom: 40px;
+    }
+
+    /* === PROJETOS === */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #fff;
+      border: 4px solid #000;
+      box-shadow: 8px 8px 0px #000;
+      padding: 15px;
+      transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translate(-5px, -5px);
+      box-shadow: 12px 12px 0px #000;
+    }
+
+    .project-card img {
+      width: 100%;
+      border: 3px solid #000;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    /* === SKILLS === */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skill {
+      padding: 10px 15px;
+      border: 3px solid #000;
+      background: #00FFB3;
+      font-weight: 800;
+      box-shadow: 4px 4px 0px #000;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 60px;
+    }
+
+    /* === RESPONSIVO === */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Eu construo interfaces que vendem.</h1>
+      <p>
+        Sou <strong>Desenvolvedor Front-End especialista em React e React Native</strong>.
+        Crio aplicações performáticas, escaláveis e com design estratégico.
+        Se você procura um freelancer que entrega resultado real, você encontrou.
+      </p>
+      <a href="#contato" class="btn">Vamos trabalhar juntos</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="sua-foto.jpg" alt="Foto Sergio Saraiva">
+    </div>
+  </div>
+
+  <!-- PROJETOS -->
+  <section>
+    <div class="section-title">Projetos em Destaque</div>
+
+    <div class="projects">
+      <div class="project-card">
+        <img src="projeto1.jpg" alt="Projeto 1">
+        <h3>App Guincho</h3>
+        <p>Aplicativo completo para solicitação de guincho com geolocalização em tempo real.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="projeto2.jpg" alt="Projeto 2">
+        <h3>Controle de Estoque</h3>
+        <p>Sistema para restaurante com múltiplas filiais, controle inteligente e relatórios.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="projeto3.jpg" alt="Projeto 3">
+        <h3>App Camarote</h3>
+        <p>Aplicativo para gerenciamento de ingressos e entrega de kits em eventos.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="projeto4.jpg" alt="Projeto 4">
+        <h3>Landing Page Produto</h3>
+        <p>Landing page estratégica com foco em conversão e performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="section-title">Especialidades</div>
+
+    <div class="skills">
+      <div class="skill">React</div>
+      <div class="skill">React Native</div>
+      <div class="skill">TypeScript</div>
+      <div class="skill">Next.js</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Performance</div>
+      <div class="skill">UI/UX</div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="section-title">Contato</div>
+    <p style="font-weight:600; margin-bottom:20px;">
+      Disponível para projetos freelance e oportunidades estratégicas.
+    </p>
+    <a href="mailto:seuemail@email.com" class="btn">Entrar em contato</a>
+  </section>
+
+  <footer>
+    © 2026 Sergio Saraiva — Front-End Developer
+  </footer>
+
+</body>
+</html>
